@@ -12,7 +12,7 @@ function custom() {
 	setTimeout(() => {
 	    
 	  [].forEach.call(bphoto, function(el) {
-	    el.firstElementChild.style.height = "200px";
+	    el.firstElementChild.style.height = "300px";
 	}); 
 	}, 
 	0);
