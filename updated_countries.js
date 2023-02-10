@@ -268,7 +268,7 @@ function populateStates(countryElement, stateElement) {
   var data_state = stateElement.dataset.state;
   if (data_state == "") {
     stateElement.length = 0;	// Fixed by Julian Woods
-    stateElement.options[0] = new Option('Select State', '');
+    stateElement.options[0] = new Option('Select your state or province', '');
     stateElement.selectedIndex = 0;
 
     var state_arr = s_a[selectedCountryIndex].split("|");
@@ -278,7 +278,7 @@ function populateStates(countryElement, stateElement) {
   }
   else {
     stateElement.length = 0;
-    stateElement.options[0] = new Option('Select State', '');
+    stateElement.options[0] = new Option('Select your state or province', '');
     var state_arr = s_a[selectedCountryIndex].split("|");
     for (var i = 0; i < state_arr.length; i++) {
       if (state_arr[i] == data_state) {
@@ -300,14 +300,14 @@ function populateCountries(countryElement, stateElement) {
   var data_country = countryElement.dataset.country;
   if (data_country == "") {
     countryElement.length = 0;
-    countryElement.options[0] = new Option('Select Country', '-1');
+    countryElement.options[0] = new Option('Select your country', '-1');
     countryElement.selectedIndex = 0;
     for (var i = 0; i < country_arr.length; i++) {
       countryElement.options[countryElement.length] = new Option(country_arr[i], country_arr[i]);
     }
   }
   else {
-    countryElement.options[0] = new Option('Select Country', '');
+    countryElement.options[0] = new Option('Select your country', '');
     for (var i = 0; i < country_arr.length; i++) {
       if (country_arr[i] == data_country) {
         countryElement.options[countryElement.length] = new Option(country_arr[i], country_arr[i], 'defaultSelected', 'selected');
